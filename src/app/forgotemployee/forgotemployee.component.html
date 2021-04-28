@@ -1,0 +1,32 @@
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+      <div id ="formTitle" >
+          <label>
+             <h2>Forgot Passowrd</h2> 
+             <!-- registeradmin -->
+             <!-- <input type="submit" class="fadeIn fourth" value="Sign Up"> -->
+          </label>
+      </div>
+      <!-- Icon -->
+  
+      <!-- Login Form -->
+      <form [formGroup]="employee"  *ngIf=!changepassword (ngSubmit)="checkUser()">
+        <input type="text" formControlName="id" class="fadeIn second"  placeholder="Enter Employee Id">
+        <input type="text" formControlName="name" class="fadeIn second"  placeholder="Enter Employee name">
+        <input type="submit" class="fadeIn fourth">
+      </form>
+  
+    
+      <form [formGroup]="employee" *ngIf=changepassword (ngSubmit)="changePassword()">
+        <input type="text" formControlName="password" class="fadeIn second"  placeholder="Enter new password">
+        <!-- <input type="text" formControlName="password" class="fadeIn third" placeholder="password"> -->
+        <input type="submit" class="fadeIn fourth">
+      </form>
+        <!-- Remind Passowrd -->
+        <div id="formFooter">
+            <a class="underlineHover" href="adminlogin">Cancle</a>
+          </div>
+    
+    </div>
+  </div>

@@ -1,0 +1,26 @@
+
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+      <div id ="formTitle" >
+          <label>
+             <h2>Employee Login</h2> 
+          </label>
+      </div>
+      <!-- Icon -->
+  
+      <!-- Login Form -->
+
+      <form [formGroup]="employee" (ngSubmit)="loginEmployee()">
+        <input type="text" formControlName="name" class="fadeIn second" placeholder="User name">
+        <input type="text" formControlName="password" class="fadeIn third" placeholder="password">
+        <input type="submit" class="fadeIn fourth" value="Log In">
+      </form>
+  
+      <!-- Remind Passowrd -->
+      <div id="formFooter">
+        <a class="underlineHover" href="forgotemployee">Forgot Password?</a>
+      </div>
+  
+    </div>
+  </div>

@@ -1,0 +1,35 @@
+<a href="adminlogin/addemployee"><button type="button" class="btn btn-primary">Add Emploee</button></a>
+<h2>Pick a highlight color</h2>
+<div>
+  <input type="radio" name="colors" (click)="color='lightgreen'">Green
+  <input type="radio" name="colors" (click)="color='yellow'">Yellow
+  <input type="radio" name="colors" (click)="color='cyan'">Cyan
+</div>
+<table class="table">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Age</th> 
+        <th scope="col">gender</th> 
+        <th scope="col">dept</th> 
+        <th scope="col">salary</th> 
+        <th scope="col">location</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr  [appHighlight]="color" defaultColor="violet" *ngFor="let item of collection">
+            <th>{{ item.id}}</th>
+           <th>{{ item.name}}</th>
+            <th>{{ currentDate - (item.dob | date :'YYYY')}}</th>
+            <th>{{ item.gender}}</th>
+            <th>{{ item.dept}}</th>
+            <th>{{ item.salary}}</th>
+            <th>{{ item.location}}</th>
+            <th><i class="glyphicon glyphicon-edit" routerLink="../edit/{{item.id}}" style="font-size:20px;color:rgb(35, 56, 172);"></i></th>
+            <th><i (click)="deleteEmployee(item.id)" class="glyphicon glyphicon-trash" style="font-size:20px;color:red;"></i></th>     
+    </tr>
+    </tbody> 
+  </table>

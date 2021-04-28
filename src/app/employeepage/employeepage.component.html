@@ -1,0 +1,15 @@
+<mat-card class="Details">
+    <mat-card-header>
+    </mat-card-header>
+    <mat-card-content>
+            <div>Name : {{ employee.value.name}}</div>
+            <div>Age : {{ currentDate - (employee.value.dob |date :'YYYY')}}</div>
+            <div>gender : {{ employee.value.gender}}</div>
+            <div>dept : {{ employee.value.dept}}</div>
+            <div>salary : {{ employee.value.salary}}</div>
+            <div>location : {{ employee.value.location}}</div>
+    </mat-card-content>
+    <mat-card-actions>
+        <a href="employeelogin"><button type="button" class="btn btn-primary">Log Out</button></a>
+    </mat-card-actions>
+  </mat-card>
